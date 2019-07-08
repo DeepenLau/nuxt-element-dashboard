@@ -1,6 +1,11 @@
 # nuxt2 + element dashboard
 [![Build Status](https://travis-ci.com/levy9527/nuxt-element-dashboard.svg?branch=master)](https://travis-ci.com/levy9527/nuxt-element-dashboard)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/levy9527/nuxt-element-dashboard/pulls)[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
+## Demo
+![](./demo.png)
+中级的题在`exam.js`
+> 由于这个题刚写完，仓库就改了成两个题了，就一起做了
+
 ## Table of Contents
 
 - **[Feature](#feature)**
@@ -77,6 +82,7 @@ yarn generate
 │   ├── mixins             可复用的“织入”页面的代码片断
 │   ├── pages              应用视图 & 路由名称，每个文件都对应一个路由视图，开发者框无需手动维护路由文件
 │   │   ├── index.vue
+│   │   ├── el-data-table.vue
 │   │   └── login.vue
 │   ├── plugins            应用插件，在Vue.js 初始化前运行，可在这里引入第三方类库
 │   │   ├── axios.js       请求拦截

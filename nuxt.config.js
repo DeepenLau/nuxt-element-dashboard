@@ -17,6 +17,7 @@ const config = {
   aliIconFont: '',
   env: {
     mock: {
+      '/api': 'http://yapi.demo.qunar.com/mock/75680',
       '/deepexi-tenant': mockServer,
       '/deepexi-permission': mockServer
     },
@@ -137,6 +138,9 @@ module.exports = {
     {
       src: '~/plugins/element'
     }
+    // {
+    //   src: '~/plugins/mockjs', ssr: true
+    // }
   ],
   modules: [
     '@nuxtjs/style-resources',
