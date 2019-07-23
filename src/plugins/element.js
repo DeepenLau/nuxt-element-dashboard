@@ -36,6 +36,7 @@ import {
 } from 'element-ui'
 import ElFormRenderer from '@femessage/el-form-renderer'
 import ElDataTable from 'el-data-table'
+// import ElDataTable from '/Users/deepen/developer/code/private/el-data-table/dist/el-data-table.esm.js'
 
 Vue.prototype.$ELEMENT = {size: 'medium'}
 

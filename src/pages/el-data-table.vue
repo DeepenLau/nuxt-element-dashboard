@@ -2,15 +2,17 @@
   <el-data-table v-bind="$data">
     <!-- 模板的自定义按钮没有 slot-scope 传出来，目前只能配置中配置的自定义按钮获取当前行数据 -->
     <!-- 有空再提个 pr 吧 -->
-    <template slot="default">
-      <el-table-column label="操作">
+    <!-- <template > -->
+    <el-table-column slot="default" label="操作">
+      <template slot-scope="scope">
         <el-button size="small" type="primary" @click="check(scope)"
           >查看</el-button
         >
         <el-button size="small">编辑</el-button>
         <el-button size="small">下架</el-button>
-      </el-table-column>
-    </template>
+      </template>
+    </el-table-column>
+    <!-- </template> -->
   </el-data-table>
 </template>
 <script>
@@ -70,11 +72,28 @@ export default {
           $type: 'select',
           $options: [{label: '下架', value: 0}, {label: '上架', value: 1}]
         }
+      ],
+      form: [
+        {
+          $type: 'input',
+          $id: 'name',
+          label: '用户名',
+          $el: {
+            placeholder: '请输入'
+          },
+          rules: [
+            {
+              required: true,
+              message: '请输入用户名',
+              trigger: 'blur'
+            }
+          ]
+        }
       ]
     }
   },
   methods: {
-    check(...row) {
+    check(row) {
       console.log(row)
     }
   }
